@@ -38,12 +38,12 @@ public class LoginTest extends BaseTest {
         loginPage.clickLogin();
         loginPage.enterCredentials(email, password);
         loginPage.clickLoginButton();
-        WebElement accountName = driver.findElement(By.xpath("//div[contains(text(),\"Neha\")]")); 
+        WebElement accountName = driver.findElement(By.xpath("//div[contains(text(),'Neha')]")); 
     	
         if(accountName.isDisplayed())
         {
         	accountName.click();
-        	driver.findElement(By.xpath("//a[contains(text(),\"Logout\")]"));
+        	driver.findElement(By.xpath("//a[contains(text(),'Logout')]"));
         	System.out.println("Logged in Successfully");
         }
     	}
